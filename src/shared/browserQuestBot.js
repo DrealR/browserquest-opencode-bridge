@@ -9,12 +9,12 @@
 
 import WebSocket from 'ws';
 
-// BrowserQuest opcodes (subset), inferred from public sources and client code.
-// If your fork differs, adjust here.
+// Minimal JSON protocol for the local min-bq-server.
+// Client ops: "hello", "move"; Server ops: "welcome", "move", "spawn", "despawn".
 const OPCODES = {
-  HELLO: 0,
-  WELCOME: 1,
-  MOVE: 2,
+  HELLO: 'hello',
+  WELCOME: 'welcome',
+  MOVE: 'move',
 };
 
 export class BrowserQuestBot {
